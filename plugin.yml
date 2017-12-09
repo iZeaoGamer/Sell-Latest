@@ -4,7 +4,6 @@ main: SellHand\Main
 version: 1.2.6
 author: [Muqsit, JackMD]
 authors: [VMPE Development Team]
-depend: EconomyAPI
 commands:
   sell:
     description: "Sells the item in your hand or all of your inventory's contents"
