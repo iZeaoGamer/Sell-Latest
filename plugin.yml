@@ -1,9 +1,9 @@
 name: Sell
-api: [3.0.0-ALPHA10]
+api: [3.0.0-ALPHA9, 3.0.0-ALPHA10]
 main: SellHand\Main
-version: 1.0.0
+version: 1.2.6
 author: [Muqsit, JackMD]
-authors: [KairusDarkSeeker, JackMD]
+authors: [VMPE Development Team]
 depend: EconomyAPI
 commands:
   sell:
@@ -11,11 +11,11 @@ commands:
     permission: sell.command
 permissions:
   sell:
-    default: op
+    default: true
     children:
       sell.hand:
-        default: op
+        default: true
       sell.all:
-        default: op
+        default: true
       sell.command:
         default: true
