@@ -1,9 +1,9 @@
 name: Sell
-api: [3.0.0-ALPHA9, 3.0.0-ALPHA10]
+api: [3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11]
 main: SellHand\Main
-version: 1.2.6
-author: [Muqsit, JackMD]
-authors: [VMPE Development Team]
+version: 1.2.6-B1
+authors: [Muqsit, JackMD]
+author: [VMPE Development Team]
 commands:
   sell:
     description: "Sells the item in your hand or all of your inventory's contents"
