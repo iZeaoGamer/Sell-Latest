@@ -100,29 +100,14 @@ class Main extends PluginBase implements Listener{
 						$price = $this->sell->get($item->getId()) * $item->getCount();
 						$sender->sendMessage(TF::GREEN . TF::BOLD . "(!) " . TF::RESET . TF::GREEN . "$" . $price . " has been added to your account.");
 						$sender->sendMessage(TF::GREEN . "Sold for " . TF::RED . "$" . $price . TF::GREEN . " (" . $item->getCount() . " " . $item->getName() . " at $" . $this->sell->get($itemId) . " each).");
-
-					/* Sell All */
-					}elseif(isset($args[0]) && strtolower($args[0]) == "all"){
-						if(!$sender->hasPermission("sell.all")){
-							$error_allPermission = $this->messages->get("error-nopermission-sellAll");
-							$sender->sendMessage(TF::RED . TF::BOLD . "Error: " . TF::RESET . TF::RED . $error_allPermission);
-							return false;
-						}
-						$items = $sender->getInventory()->getContents();
-						foreach($items as $item){
-							if($this->sell->get($item->getId()) !== null && $this->sell->get($item->getId()) > 0){
-								$price = $this->sell->get($item->getId()) * $item->getCount();
-								EconomyAPI::getInstance()->addMoney($sender, $price);
-								$sender->sendMessage(TF::GREEN . TF::BOLD . "(!) " . TF::RESET . TF::GREEN . "Sold for " . TF::RED . "$" . $price . TF::GREEN . " (" . $item->getCount() . " " . $item->getName() . " at $" . $this->sell->get($item->getId()) . " each).");
-								$sender->getInventory()->remove($item);
-							}
-						}
+					        return true;
+					       }
+				           }
 					}elseif(isset($args[0]) && strtolower($args[0]) == "about"){
 						$sender->sendMessage(TF::RED . TF::BOLD . "(!) " . TF::RESET . TF::GRAY . "This server uses the plugin, Sell Hand, by Muqsit Rayyan and fixed by JackMD.");
 					}else{
 						$sender->sendMessage(TF::RED . TF::BOLD . "(!) " . TF::RESET . TF::DARK_RED . "Sell Online Market");
 						$sender->sendMessage(TF::RED . "- " . TF::DARK_RED . "/sell hand " . TF::GRAY . "- Sell the item that's in your hand.");
-						$sender->sendMessage(TF::RED . "- " . TF::DARK_RED . "/sell all " . TF::GRAY . "- Sell every possible thing in inventory.");
 						return true;
 					}
 				}else{
