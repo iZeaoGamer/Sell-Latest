@@ -1,8 +1,7 @@
 name: Sell
-api: [3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11]
+api: [3.0.0-ALPHA10, 3.0.0-ALPHA11]
 main: SellHand\Main
-version: 1.2.7
-authors: [Muqsit, JackMD]
+version: 1.2.8
 author: VMPE Development Team
 commands:
   sell:
@@ -13,8 +12,6 @@ permissions:
     default: true
     children:
       sell.hand:
-        default: true
-      sell.all:
         default: true
       sell.command:
         default: true
