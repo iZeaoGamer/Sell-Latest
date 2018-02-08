@@ -101,8 +101,6 @@ class Main extends PluginBase implements Listener{
 						$sender->sendMessage(TF::GREEN . TF::BOLD . "(!) " . TF::RESET . TF::GREEN . "$" . $price . " has been added to your account.");
 						$sender->sendMessage(TF::GREEN . "Sold for " . TF::RED . "$" . $price . TF::GREEN . " (" . $item->getCount() . " " . $item->getName() . " at $" . $this->sell->get($itemId) . " each).");
 					        return true;
-					       }
-				           }
 					}elseif(isset($args[0]) && strtolower($args[0]) == "about"){
 						$sender->sendMessage(TF::RED . TF::BOLD . "(!) " . TF::RESET . TF::GRAY . "This server uses the plugin, Sell Hand, by Muqsit Rayyan and fixed by JackMD.");
 					}else{
