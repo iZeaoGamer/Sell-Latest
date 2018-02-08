@@ -68,7 +68,7 @@ class Main extends PluginBase implements Listener{
 			}
 
 				/* Check if the player is permitted to use the command */
-				if($sender->hasPermission("sell") || $sender->hasPermission("sell.hand") || $sender->hasPermission("sell.all")){
+				if($sender->hasPermission("sell") || $sender->hasPermission("sell.hand")){
 					/* Disallow non-survival mode abuse */
 					if(!$sender->isSurvival()){
 						$sender->sendMessage(TF::RED . TF::BOLD ."Error: ". TF::RESET . TF::DARK_RED ."Please switch back to survival mode.");
